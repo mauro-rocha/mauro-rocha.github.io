@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AlertCircle, CheckCircle, Loader, LogOut, Plus, Save, Trash2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ImageUploader } from "../components/ImageUploader";
 import { useData } from "../context/DataContext";
 import { Project, Service, SiteContent } from "../types";
 
@@ -531,16 +532,11 @@ export const Admin: React.FC = () => {
 
                     {/* URLs */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="text-xs text-gray-500 mb-1 block uppercase tracking-wider">
-                          Image URL (Main)
-                        </label>
-                        <input
-                          value={editForm.image}
-                          onChange={(e) => handleInputChange("image", e.target.value)}
-                          className="w-full bg-background border border-white/20 p-3 rounded text-white text-xs font-mono focus:border-blue-500 transition-colors"
-                        />
-                      </div>
+                      <ImageUploader
+                        label="Image (Main)"
+                        value={editForm.image}
+                        onChange={(url) => handleInputChange("image", url)}
+                      />
                       <div>
                         <label className="text-xs text-gray-500 mb-1 block uppercase tracking-wider">
                           Project Link (Href)
@@ -714,16 +710,11 @@ export const Admin: React.FC = () => {
 
                       {/* URLs */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="text-xs text-gray-500 mb-1 block uppercase tracking-wider">
-                            Image URL (Main)
-                          </label>
-                          <input
-                            value={editForm.image}
-                            onChange={(e) => handleInputChange("image", e.target.value)}
-                            className="w-full bg-background border border-white/20 p-3 rounded text-white text-xs font-mono focus:border-blue-500 transition-colors"
-                          />
-                        </div>
+                        <ImageUploader
+                          label="Image (Main)"
+                          value={editForm.image}
+                          onChange={(url) => handleInputChange("image", url)}
+                        />
                         <div>
                           <label className="text-xs text-gray-500 mb-1 block uppercase tracking-wider">
                             Project Link (Href)
@@ -1240,16 +1231,11 @@ export const Admin: React.FC = () => {
                       </div>
                     ))}
 
-                    <div>
-                      <label className="text-xs text-gray-500 mb-1 block uppercase tracking-wider">
-                        Profile Image URL
-                      </label>
-                      <input
-                        value={editContentForm?.profileImage ?? ""}
-                        onChange={(e) => handleContentSimpleChange("profileImage", e.target.value)}
-                        className="w-full bg-background border border-white/20 p-3 rounded text-white focus:border-blue-500 transition-colors"
-                      />
-                    </div>
+                    <ImageUploader
+                      label="Profile Image"
+                      value={editContentForm?.profileImage ?? ""}
+                      onChange={(url) => handleContentSimpleChange("profileImage", url)}
+                    />
 
                     <div>
                       <label className="text-xs text-gray-500 mb-1 block uppercase tracking-wider">

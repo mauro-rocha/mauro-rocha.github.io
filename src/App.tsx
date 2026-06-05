@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { CustomCursor } from './components/CustomCursor';
 import { Header } from './components/Header';
 import { DataProvider } from './context/DataContext';
@@ -127,6 +128,8 @@ function App() {
               <AIChat />
             </Suspense>
           )}
+
+          <SpeedInsights />
         </div>
       </Router>
     </DataProvider>

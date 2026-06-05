@@ -9,11 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@amplitude/unified": "^1.1.11",
     "@fontsource/manrope": "^5.2.8",
     "@fontsource/oswald": "^5.2.8",
     "@google/genai": "^1.38.0",
     "@react-three/drei": "9.105.4",
     "@react-three/fiber": "8.16.1",
+    "@vercel/blob": "^2.4.0",
+    "@vercel/speed-insights": "^2.0.0",
     "firebase": "^12.8.0",
     "framer-motion": "10.16.4",
     "lenis": "^1.0.0",
@@ -27,6 +30,7 @@
     "@types/node": "^22.14.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@vercel/node": "^5.8.12",
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.24",
     "postcss": "^8.5.6",
