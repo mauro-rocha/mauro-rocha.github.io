@@ -19,7 +19,7 @@ import './index.css';
 
 // Initialize Amplitude Analytics + Session Replay (client-side only, runs once)
 const AMPLITUDE_API_KEY =
-  process.env.AMPLITUDE_API_KEY || '860ff7324a73cc8ce5ed1e69f50b05ca';
+  process.env.AMPLITUDE_API_KEY;
 const AMPLITUDE_SERVER_ZONE = (process.env.AMPLITUDE_SERVER_ZONE as 'US' | 'EU') || 'US';
 
 if (AMPLITUDE_API_KEY) {
