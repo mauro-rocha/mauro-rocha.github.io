@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
         <div className="flex gap-8 mb-16">
           <MagneticButton className="relative hover:z-50">
              <a
-               href="https://github.com/mauro-rocha-old"
+               href="https://github.com/mauro-rocha"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="GitHub do Mauro Rocha"
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
           </MagneticButton>
           <MagneticButton className="relative hover:z-50">
              <a
-               href="https://www.instagram.com/mauro_lucio_0"
+               href="https://www.instagram.com/mauro.rockit"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="Instagram do Mauro Rocha"
