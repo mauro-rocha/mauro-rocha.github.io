@@ -116,7 +116,7 @@ function App() {
             <Suspense fallback={null}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/work/:id" element={<WorkDetail />} />
+                <Route path="/work/:slug" element={<WorkDetail />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

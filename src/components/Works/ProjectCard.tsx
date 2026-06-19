@@ -4,6 +4,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useData } from "../../context/DataContext";
 import { Project } from "../../types";
+import { slugify } from "../../utils/slug";
 
 const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
   const { language } = useData();
@@ -15,7 +16,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
       viewport={{ once: true }}
-      onClick={() => navigate(`/work/${project.id}`)}
+      onClick={() => navigate(`/work/${slugify(project.title)}`)}
       className="group relative w-full border-t border-white/10 py-12 md:py-16 cursor-pointer interactive hover:bg-white/5 transition-colors duration-300"
     >
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
