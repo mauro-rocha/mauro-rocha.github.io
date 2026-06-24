@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
   };
 
   const languageTarget =
-    language === "pt-BR"
+    language !== "pt-BR"
       ? { short: "EN", flag: "🇺🇸", ariaLabel: "Switch language to English" }
       : { short: "PT", flag: "🇧🇷", ariaLabel: "Mudar idioma para Português" };
 
@@ -118,7 +118,6 @@ export const Header: React.FC = () => {
                   <span className="text-base leading-none" aria-hidden="true">
                     {languageTarget.flag}
                   </span>
-                  {languageTarget.short}
                 </button>
               </MagneticButton>
             </nav>
